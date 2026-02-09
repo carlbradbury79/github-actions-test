@@ -32,6 +32,6 @@ jobs:
       - run: npm test
       - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main' && github.event_name == 'push'
-        run: npm run deploy
         env:
           GITHUB_TOKEN: ${{ github.token }}
+        run: npm run deploy
